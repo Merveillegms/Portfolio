@@ -556,7 +556,7 @@ function App() {
 
       <footer className="site-footer section-shell">
         <a className="brand footer-brand" href="#accueil"><span className="brand-mark">M<span>.</span></span><span className="brand-name">Marie-Merveille</span></a>
-        <span>© {new Date().getFullYear()} · Cotonou, Bénin.</span>
+        <span>© {new Date().getFullYear()} · Designed by Merveille</span>
         <a href="#accueil" className="footer-top">Retour en haut <ArrowUp size={14} /></a>
       </footer>
 
