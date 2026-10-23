@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+.env
+.env.*
+!.env.example
+/CV_Gbaguidi_Marie-Merveille-2.docx
+/WhatsApp Image 2026-10-22 at 16.59.57.jpeg
