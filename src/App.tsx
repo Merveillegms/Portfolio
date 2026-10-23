@@ -29,6 +29,7 @@ import type { Project } from "./data/portfolio";
 import AmbientCanvas from "./components/AmbientCanvas";
 
 type Theme = "dark" | "light";
+const assetUrl = (fileName: string) => `${import.meta.env.BASE_URL}${fileName}`;
 
 function ProfileAvatar({
   buttonRef,
@@ -49,7 +50,7 @@ function ProfileAvatar({
       disabled={!photoLoaded}
     >
       {photoLoaded ? (
-        <img src="/profile-photo.jpeg" alt="" onError={() => setPhotoLoaded(false)} />
+        <img src={assetUrl("profile-photo.jpeg")} alt="" onError={() => setPhotoLoaded(false)} />
       ) : (
         <span>MM</span>
       )}
@@ -357,7 +358,7 @@ function App() {
                 <a className="button button-primary" href="#projets">Découvrir mes projets <ArrowDownRight size={17} /></a>
                 <a className="button button-quiet" href="#contact">Me contacter <ArrowUpRight size={16} /></a>
               </div>
-              <a className="cv-link" href="/cv-marie-merveille.docx" download="CV-Marie-Merveille-Gbaguidi.docx">
+              <a className="cv-link" href={assetUrl("cv-marie-merveille.docx")} download="CV-Marie-Merveille-Gbaguidi.docx">
                 <Download size={14} /> Télécharger mon CV <span>· Word</span>
               </a>
             </Reveal>
@@ -588,7 +589,7 @@ function App() {
           >
             <X size={20} />
           </button>
-          <img src="/profile-photo.jpeg" alt="Portrait de Marie-Merveille" />
+          <img src={assetUrl("profile-photo.jpeg")} alt="Portrait de Marie-Merveille" />
         </div>
       )}
     </>
